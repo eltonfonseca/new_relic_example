@@ -1,0 +1,4 @@
+https://www.google.com.br
+https://random-status-code.herokuapp.com
+https://www.medium.com
+https://www.github.com
