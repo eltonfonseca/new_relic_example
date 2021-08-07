@@ -23,11 +23,10 @@ func main() {
 
 	newRelicClient := relic.New(appName, license)
 	txn := newRelicClient.StartTransaction("transaction")
+	defer txn.End()
 
 	hosts := readFile(txn)
 	testHosts(hosts, txn)
-
-	txn.End()
 }
 
 func testHosts(hosts []Host, txn *newrelic.Transaction) {
